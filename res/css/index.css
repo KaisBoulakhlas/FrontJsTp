@@ -1,0 +1,48 @@
+#index{
+    cursor : pointer;
+}
+
+table{
+    position: relative;
+    left: 5%;
+    margin-top: 5%;
+    width: 60%;
+}
+
+nav{
+    background: linear-gradient(50deg, red, blue);
+}
+
+#body{
+    padding: 0;
+    margin: 0;
+    background: #ddd;
+}
+#bouton{
+    margin-top: 10px;
+
+}
+#cont{
+    margin:100px auto;
+    width: 35%;
+
+}
+@media(max-width: 952px){
+    #cont{
+        width: 60%;
+    }
+}
+@media(max-width: 475px){
+    #cont{
+        width: 80%;
+    }
+}
+
+#nothing{
+    color : white;
+    border-radius : 10px;
+    text-align : center;
+    margin-right: 30%;
+    font-style: italic;
+    background: linear-gradient(50deg, red, blue);
+}

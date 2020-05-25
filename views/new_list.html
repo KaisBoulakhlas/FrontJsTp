@@ -1,0 +1,25 @@
+<div class="row animated fadeIn">
+    <div class="col s1"></div>
+    <div class="col s8">
+        <h3 id="title" style="margin-left: 10%;">Ajouter une liste</h3>
+        <hr style="position: relative;left: 10%;opacity:0.3">
+    </div>
+</div>
+
+<div class="row container animated fadeIn">
+    <div class="col s1"></div>
+    <form class="col s6 collapsible responsive" >
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="shop" type="text" class="validate">
+                <label for="shop" id="label">Magasin</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="date" placeholder="dd/mm/yyyy" type="text" class="datepicker">
+            </div>
+        </div>
+        <a class="waves-effect waves-light btn"  onclick="newListController.saveList()" style="margin-bottom: 10px;">Valider<i class="material-icons right">check</i></a>
+    </form>
+</div>
+
+

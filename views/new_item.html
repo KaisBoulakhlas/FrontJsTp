@@ -1,0 +1,47 @@
+<div class="row animated fadeIn">
+    <div class="col s1"></div>
+    <div class="col s8">
+        <h3 id="title" style="margin-left: 10%;">Ajouter des courses<a title="back" class="waves-effect waves-light btn"  onclick="navigate('index')" style="margin-left: 10px;"><i class="material-icons">backspace</i></a>
+        </h3>
+        <hr style="position: relative;left: 10%;opacity:0.3">
+    </div>
+</div>
+
+<div class="container input-field col s12">
+    <div class="row">
+        <div id="table" class="input-field col s8 animated fadeIn">
+            <table id="tableAllItems" class="centered highlight collapsible responsive">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Libellé</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="tableBodyAllItems">
+                </tbody>
+            </table>
+        </div>
+        <div id="edit" class="input-field col s4">
+            <form class="col s12 collapsible responsive">
+                <div id="row" class="row">
+                    <div class="input-field col s6">
+                        <input id="quantite" type="number" class="validate">
+                        <label for="quantite" id="hidden">Quantité</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="label" type="text" class="validate">
+                        <label for="label" id="hidden2">Label</label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn"  onclick="newItemController.saveItem()" style="margin-bottom: 10px;">Valider<i class="material-icons right">check</i></a>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+
