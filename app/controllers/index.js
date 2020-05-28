@@ -181,6 +181,8 @@ class IndexController extends BaseController {
                     this.displayAllLists();
                 } else if(await this.model.delete(id) === 404){
                     this.displayNotFoundError();
+                } else if (await this.model.delete(id) === 403){
+                    this.toast("Accès interdit",'red darken-1')
                 } else{
                     this.displayServiceError()
                 }

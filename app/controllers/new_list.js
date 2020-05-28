@@ -42,7 +42,9 @@ class NewListController extends BaseController {
                              this.toast("La liste a bien été modifée",'green darken-1 rounded');
                              self.list = null;
                              navigate('index')
-                         } else {
+                         } else if(await this.model.update(self.list) === 403) {
+                             this.toast("Accès interdit",'red darken-1')
+                         }else{
                              this.displayServiceError()
                          }
                      }
