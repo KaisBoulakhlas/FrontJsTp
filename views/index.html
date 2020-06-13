@@ -13,11 +13,13 @@
                 <thead id="header" style="visibility: hidden">
                 <tr>
                     <th></th>
+                    <th></th>
                     <th scope="col">Magasin</th>
                     <th scope="col">Date</th>
                     <th scope="col">Articles</th>
-                    <th></th>
-                    <th></th>
+                    <th scope="col" >Modifier</th>
+                    <th scope="col">Partager</th>
+                    <th scope="col">Supprimer</th>
                 </tr>
                 </thead>
                 <tbody id="tableBodyAllLists">
@@ -26,5 +28,80 @@
             </table>
         </div>
     </div>
+</div>
+
+
+<div id="modal-addPartage" class="modal">
+    <div class="modal-content">
+        <h4 class="modal-title center">Partager la liste</h4>
+        <hr style="margin: 5px;">
+        <div class="row">
+            <div class="col s5">
+                <h6>Entrer un utilisateur : </h6>
+            </div>
+            <div class="col s5">
+                <h6>Choix d'accès aux droits : </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div id="addPartage-search" class="col s5">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">search</i>
+                    <input type="text" id="addPartage-autocomplete-input" class="autocomplete" autocomplete="off">
+                    <label for="addPartage-autocomplete-input">Utilisateur</label>
+                </div>
+            </div>
+            <form id="addPartage-radio" class="col s5" style="margin-top: 20px;">
+                <label>
+                    <input id="radioReadShare" name="rights" type="radio" value="false" checked />
+                    <span>Lecture</span>
+                </label>
+                <label style="padding-left: 20px">
+                    <input name="rights" type="radio"  value="true" />
+                    <span>Lecture/écriture</span>
+                </label>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <label id="addShareUserSelect" class="small-text">Vous n'avez entré personne</label>
+            </div>
+            <div class="col s5">
+                <label class="small-text"></label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="btn-valid-addPartage" class="waves-effect waves-light btn" onclick="indexController.addShare()"><i class="material-icons left">check</i>Valider</a>
+            <a class="modal-close waves-effect waves-light btn"><i class="material-icons left">close</i>Quitter</a>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalSharesOfList" class="modal">
+    <div class="modal-content">
+        <div id="title"></div>
+        <hr>
+        <div style="margin-left: 10%;" class="center">
+            <table id="tableAllSharesOfList" class="centered highlight collapsible responsive"  style="visibility : hidden;">
+                <thead id="header-share" style="visibility: hidden">
+                <tr>
+                    <th scope="col">Magasin</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Utilisateur</th>
+                    <th scope="col">Droits</th>
+                </tr>
+                </thead>
+                <tbody id="tableBodyAllSharesOfList">
+                </tbody>
+                <tfooter id="footer-share" style="display : none"></tfooter>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-light btn"><i class="material-icons left">close</i>Quitter</a>
+    </div>
+
 </div>
 

@@ -19,6 +19,7 @@
                 <li><a onclick="navigate('index');$('#headerLogo').innerHTML = `<i class='material-icons' style='padding-top:1%;'>add_shopping_cart</i>${this.textContent}`;">Listes de courses</a></li>
                 <li><a onclick="navigate('new_list');$('#headerLogo').innerHTML = `<i class='material-icons' style='padding-top:1%;'>queue</i>${this.textContent}`">Nouvelle liste</a></li>
                 <li><a onclick="navigate('historique');$('#headerLogo').innerHTML = `<i class='material-icons' style='padding-top:1%;'>archive</i>${this.textContent}`">Historique</a></li>
+                <li><a onclick="navigate('partage')">Partages</a></li>
                 <li style="padding-left:50px;"><a onclick="loginController.logout();">Se déconnecter</a></li>
             </ul>
         </div>
@@ -44,6 +45,7 @@
     <script type="application/ecmascript" src="app/services/useraccountapi.js"></script>
     <script type="application/ecmascript" src="app/services/listapi.js"></script>
     <script type="application/ecmascript" src="app/services/itemapi.js"></script>
+    <script type="application/ecmascript" src="app/services/partageapi.js"></script>
     <script type="application/ecmascript" src="app/controllers/basecontroller.js"></script>
     <script>navigate("login")</script>
 

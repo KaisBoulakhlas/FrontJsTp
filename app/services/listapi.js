@@ -17,6 +17,10 @@ class ListAPI extends BaseAPIService {
         return fetchJSON(`${this.url}/${id}`, this.token)
     }
 
+    getListShare(id){
+        return fetchJSON(`${this.url}Share/${id}`, this.token);
+    };
+
     getListsArchived(){
         return fetchJSON("http://localhost:3333/listArchived",this.token)
     }

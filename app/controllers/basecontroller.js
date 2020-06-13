@@ -43,6 +43,9 @@ class BaseController {
     displayNotFoundError() {
         this.toast('Entité inexistante','red darken-4')
     }
+    displayUnauthorizedError(){
+        this.toast('Accès interdit','red darken-4');
+    };
 
    getModal(selector) {
         return M.Modal.getInstance($(selector))
